@@ -22,5 +22,5 @@ Makes use of the masonry layout library made by David DeSandro. Refer [masonry.d
 
 ## Demo
 
-- 
+- [masonry-layout.herokuapp.com](https://masonry-layout.herokuapp.com)
  
