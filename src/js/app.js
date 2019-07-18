@@ -4,7 +4,6 @@
     itemSelector: '.grid-tile',
     columnWidth: '.grid-sizer',
     gutter: 10,
-    stagger: 10,
     fitWidth: true
   }
 
