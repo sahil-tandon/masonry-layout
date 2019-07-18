@@ -21,7 +21,7 @@ img {
 
 /** @layout */
 body {
-  padding: 50px 20px; }
+  padding: 50px 20px 20px 20px; }
 
 /** @mixins */
 /** @variables */
@@ -156,3 +156,31 @@ body {
 
 .grid-tile.grid-tile[data-category="yellow-tiles"] {
   background: #f3c808; }
+
+/** @component : footer component */
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 50px; }
+  footer .heart {
+    background-color: red;
+    display: inline-block;
+    height: 5px;
+    margin: 0 5px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 5px; }
+    footer .heart:before, footer .heart:after {
+      content: "";
+      background-color: red;
+      border-radius: 50%;
+      height: 5px;
+      position: absolute;
+      width: 5px; }
+    footer .heart:before {
+      top: -4px;
+      left: 0; }
+    footer .heart:after {
+      top: 0;
+      left: 4px; }
