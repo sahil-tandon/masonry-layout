@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Front-End Code Exercise - Sahil Tandon</title>
+  <meta name="description" content="Response to Front-End Code Exercise Problem | Masonry Grid Layout">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bundle.min.css">
+</head>
+
+<body>
+  <div class="grid-container">
+    <p class="grid-heading">FILTER TILES:</p>
+    <ul class="grid-filters">
+      <li class="selected" data-filter=".grid-tile"><a href>All</a></li>
+      <li data-filter=".grid-tile[data-category='black-tiles']"><a href>Black Tiles</a></li>
+      <li data-filter=".grid-tile[data-category='blue-tiles']"><a href>Blue Tiles</a></li>
+      <li data-filter=".grid-tile[data-category='yellow-tiles']"><a href>Yellow Tiles</a></li>
+    </ul>
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      <div class="grid-tile grid-tile__width-2 grid-tile__height-2" data-category="black-tiles">
+        <span class="tile-logo">Tile 1</span>
+        <div class="tile-content">This is a Black Tile. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          non elementum felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et commodo erat, nec
+          malesuada erat. Aenean id urna felis. In hac habitasse platea dictumst. Fusce nulla velit, dictum sed
+          ultricies sed, tempus vitae nunc. Pellentesque tempus quam eros, eget porttitor orci commodo sit amet. Quisque
+          suscipit massa a nulla congue, ut mattis eros rutrum. Aenean gravida scelerisque velit ac iaculis. Mauris
+          porttitor laoreet leo vel semper. Ut vel ullamcorper massa. Mauris nec auctor nisl. Donec sit amet enim eu
+          ipsum ornare sollicitudin.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile grid-tile__height-2" data-category="yellow-tiles">
+        <span class="tile-logo">Tile 2</span>
+        <div class="tile-content">Hodor! Hodor hodor, hodor hodor hodor? Hodor! Hodor hodor, hodor hodor hodor? Hodor!
+          Hodor hodor, hodor; hodor hodor hodor hodor? Hodor, hodor... Hodor hodor hodor? Hodor hodor HODOR! Hodor
+          hodor... Hodor hodor hodor... HODOR!? Hodor Hodor Hodor Hodor Hodor!</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="black-tiles">
+        <span class="tile-logo">Tile 3</span>
+        <div class="tile-content">Cupcake ipsum dolor sit. Amet I love liquorice jujubes pudding croissant I love
+          pudding. Apple pie macaroon toffee jujubes pie tart cookie applicake caramels. Halvah macaroon I love
+          lollipop. Wypas I love pudding brownie cheesecake tart jelly-o. Bear claw cookie chocolate bar jujubes toffee.
+        </div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="blue-tiles">
+        <span class="tile-logo">Tile 4</span>
+        <div class="tile-content">Each tile spans two column's width once expanded. No matter how wide it is in its
+          default state. On extra-small viewports, tiles take the full width of the screen in all states.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="yellow-tiles">
+        <span class="tile-logo">Tile 5</span>
+        <div class="tile-content">All expanded tiles adjust their height based off of the amount of content they hold.
+        </div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile grid-tile__height-2" data-category="yellow-tiles">
+        <span class="tile-logo">Tile 6</span>
+        <div class="tile-content">This is a Blue Tile. Lorizzle izzle yo sizzle amizzle, that’s the shizzle adipiscing
+          elit. Nullizzle velizzle, hizzle volutpizzle, suscipizzle quis, gravida vizzle, check it out. Pellentesque da
+          bomb tortizzle. Sizzle eros. Gangster izzle dolor dapibus turpis tempizzle away.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="blue-tiles">
+        <span class="tile-logo">Tile 7</span>
+        <div class="tile-content">Daenerys of the House Targaryen, the First of Her Name, The Unburnt, Queen of the
+          Andals, the Rhoynar and the First Men, Queen of Meereen, Khaleesi of the Great Grass Sea, Protector of the
+          Realm, Lady Regent of the Seven Kingdoms, Breaker of Chains and Mother of Dragons.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile grid-tile__height-2" data-category="black-tiles">
+        <span class="tile-logo">Tile 8</span>
+        <div class="tile-content">In connection with this appellative of 'Whalebone whales,' it is of great importance
+          to mention, that however such a nomenclature may be convenient in facilitating allusions to some kind of
+          whales, yet it is in vain to attempt a clear classification of the Leviathan, founded upon either his baleen,
+          or hump, or fin, or teeth.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="yellow-tiles">
+        <span class="tile-logo">Tile 9</span>
+        <div class="tile-content">On the contrary, said Sherlock Holmes, it is the brightest rift which I can at present
+          see in the clouds. However innocent he might be, he could not be such an absolute imbecile as not to see that
+          the circumstances were very black against him.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="black-tiles">
+        <span class="tile-logo">Tile 10</span>
+        <div class="tile-content">Moonfish, steelhead, lamprey southern flounder tadpole fish sculpin bigeye,
+          blue-redstripe danio collared dogfish. Smalleye squaretail goldfish arowana butterflyfish pipefish
+          wolf-herring jewel tetra, shiner; gibberfish red velvetfish. Thornyhead yellowfin pike threadsail ayu
+          cutlassfish.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile grid-tile__height-2" data-category="blue-tiles">
+        <span class="tile-logo">Tile 11</span>
+        <div class="tile-content">Parmesan st. agur blue cheese cheese slices. Gouda brie say cheese say cheese ricotta
+          camembert de normandie red leicester blue castello. Goat port-salut ricotta camembert de normandie caerphilly
+          cheese and biscuits croque monsieur airedale. Feta blue castello brie fromage frais gouda gouda cheese strings
+          dolcelatte. Taleggio pecorino mascarpone airedale cow danish fontina cheese on toast edam. Who moved my cheese
+          monterey jack jarlsberg brie say cheese goat mascarpone everyone loves. Taleggio blue castello st. agur blue
+          cheese.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="black-tiles">
+        <span class="tile-logo">Tile 12</span>
+        <div class="tile-content">Veggies sunt bona vobis, proinde vos postulo esse magis grape pea sprouts horseradish
+          courgette maize spinach prairie turnip jícama coriander quandong gourd broccoli seakale gumbo.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="blue-tiles">
+        <span class="tile-logo">Tile 13</span>
+        <div class="tile-content">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne
+          lumbering animata corpora quaeritis. Summus brains sit , morbo vel maleficia? De apocalypsi gorger omero
+          undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi
+          dentevil vultus comedat cerebella viventium.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="yellow-tiles">
+        <span class="tile-logo">Tile 14</span>
+        <div class="tile-content">Secondary fermentation degrees plato units of bitterness, cask conditioned ale ibu
+          real ale pint glass craft beer. krausen goblet grainy ibu brewhouse lagering finishing hops. Trappist, black
+          malt chocolate malt balthazar gravity dextrin saccharification trappist final gravity. Aau scotch ale,
+          adjunct. hops bung infusion, cask conditioning pitching malt extract.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="blue-tiles">
+        <span class="tile-logo">Tile 15</span>
+        <div class="tile-content">Est Schlitz shoreditch fashion axe. Messenger bag cupidatat Williamsburg sustainable
+          aliqua, artisan duis pickled pitchfork. Semiotics Banksy ad roof party, jean shorts selvage mollit vero
+          consectetur hashtag before they sold out blue bottle qui nihil aute. Aliquip artisan retro squid ullamco.
+          Vegan enim Williamsburg, eu umami shabby chic single-origin coffee et.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="yellow-tiles">
+        <span class="tile-logo">Tile 16</span>
+        <div class="tile-content">Cat ipsum dolor sit amet, hunt anything that moves or hopped up on goofballs hide when
+          guests come over. Hide when guests come over intrigued by the shower, or stare at ceiling climb leg for
+          stretch and use lap as chair. Hunt anything that moves flop over, leave dead animals as gifts for chase
+          imaginary bugs, chase mice for stare at ceiling yet hopped up on goofballs.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile" data-category="black-tiles">
+        <span class="tile-logo">Tile 17</span>
+        <div class="tile-content">Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Skype dropio spotify dogster
+          voki edmodo etsy knewton gooru dropio zoosk, imvu zapier skype ebay heroku plugg dogster lala chartly. Joyent
+          unigo handango hipmunk chegg movity vimeo zoho imvu skype, geni palantir vimeo trulia twitter bitly divvyshot
+          ning, gsnap napster flickr wufoo blippy joukuu insala edmodo.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile grid-tile__height-2" data-category="yellow-tiles">
+        <span class="tile-logo">Tile 18</span>
+        <div class="tile-content">Foursquare iPhone app scoop right-sizing HuffPo Romenesko masthead Arab spring, Andy
+          Carvin pay curtain metered model paidContent horse-race coverage engagement CPM, Facebook Storify Instagram
+          Gutenberg CNN leaves it there Robin Sloan. experiment synergize tweet analog thinking tools Alberto Ibarguen
+          Frontline TechCrunch advertising, newspaper.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile grid-tile__height-2" data-category="black-tiles">
+        <span class="tile-logo">Tile 19</span>
+        <div class="tile-content">One for all and all for one, Muskehounds are always ready. One for all and all for
+          one, helping everybody. One for all and all for one, it's a pretty story. Sharing everything with fun, that's
+          the way to be. One for all and all for one, Muskehounds are always ready. One for all and all for one, helping
+          everybody. One for all and all for one, can sound pretty corny.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+      <div class="grid-tile grid-tile__width-2 grid-tile__height-2" data-category="blue-tiles">
+        <span class="tile-logo">Tile 20</span>
+        <div class="tile-content">For those who have seen the Earth from space, and for the hundreds and perhaps
+          thousands more who will, the experience most certainly changes your perspective. The things that we share in
+          our world are far more valuable than those which divide us.</div>
+        <div class="tile-collapse"><span></span></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/bundle.min.js"></script>
+</body>
+
+</html>
