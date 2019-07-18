@@ -39,6 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 30px auto 50px auto; }
     .grid-container .grid-filters li {
