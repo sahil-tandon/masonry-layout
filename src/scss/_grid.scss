@@ -1,0 +1,173 @@
+/** @component : masonry grid layout */
+.grid-container {
+  margin: 0 auto;
+  @include respond-above(515px) {
+    max-width: 910px;
+  }
+  
+  .grid-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .grid-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 30px auto 50px auto;
+    li {
+      flex: 1;
+      max-width: 150px;
+      margin: 0 5px;
+      border: 1px solid $color-white;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+    li.selected {
+      border-color: $color-mako;
+    }
+    li a {
+      display: block;
+      text-decoration: none;
+      padding: 5px;
+      color: $color-mako;
+    }
+  }
+
+  .grid {
+    margin: 0 auto;
+  }
+
+  .grid-sizer {
+    width: 350px;
+    @include respond-above(515px) {
+      width: 220px;
+    }
+  }
+
+  .grid-tile {
+    width: 350px;
+    @include respond-above(515px) {
+      width: 220px;
+      &.grid-tile__width-2,
+      &.grid-tile__open {
+        width: 450px;
+      }
+      &.grid-tile__height-2 {
+        height: 220px;
+      }
+    }
+  }
+}
+
+
+.grid-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 105px;
+  margin-bottom: 10px;
+  color: $color-black;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,.2);
+  transition: box-shadow 0.2s ease, border 0.2s ease;
+  &:not(.grid-tile__open):hover {
+    box-shadow: 1px 2px 5px 2px rgba(0,0,0,.3);
+    border-color: $color-black;
+  }
+
+  .tile-logo {
+    display: inline-block;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    pointer-events: none;
+    padding: 15px 0 0 15px;
+  }
+
+  .tile-content {
+    display: none;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .tile-collapse {
+    display: none;
+    float: right;
+    padding: 15px;
+    cursor: pointer;
+    span {  
+      position: relative;
+      float: right;  
+      width: 24px;
+      height: 24px;
+      border: 2px solid $color-black;
+      background: transparent;
+      transition: background 0.4s ease;
+    }
+    span:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 2px;
+      background: $color-black;
+      transition: background 0.4s ease;
+    }
+    &:hover span {
+      background: $color-black;
+    }
+    &:hover span:after {
+      background: $color-corn;
+    }
+  }
+}
+
+.grid-tile.grid-tile__open {  
+  display: block;
+  cursor: default;
+  height: auto!important;
+  z-index: 2;
+  .tile-collapse {
+    display: inline-block;
+  }
+  .tile-content {
+    display: block;
+  }
+}
+
+.grid-tile {
+  &.grid-tile[data-category="black-tiles"] {
+    background: $color-mako;
+    color: $color-white;
+    .tile-collapse span {
+      border-color: $color-white;
+    }
+    .tile-collapse span:after {
+      background: $color-white;
+    }
+    .tile-collapse:hover span {
+      background: $color-white;
+    }
+    .tile-collapse:hover span:after {
+      background: $color-mako;
+    }    
+  }
+
+  &.grid-tile[data-category="blue-tiles"] {
+    background: $color-bermuda;
+    .tile-collapse:hover span:after {
+      background: $color-bermuda;
+    }
+  }
+
+  &.grid-tile[data-category="yellow-tiles"] {
+    background: $color-corn;
+  }
+}

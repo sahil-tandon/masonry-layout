@@ -1,0 +1,157 @@
+/** @resets */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/** @layout */
+body {
+  padding: 50px 20px; }
+
+/** @mixins */
+/** @variables */
+/** @component : masonry grid layout */
+.grid-container {
+  margin: 0 auto; }
+  @media (min-width: 515px) {
+    .grid-container {
+      max-width: 910px; } }
+  .grid-container .grid-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center; }
+  .grid-container .grid-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 30px auto 50px auto; }
+    .grid-container .grid-filters li {
+      flex: 1;
+      max-width: 150px;
+      margin: 0 5px;
+      border: 1px solid #fff;
+      text-align: center;
+      transition: 0.2s ease; }
+    .grid-container .grid-filters li.selected {
+      border-color: #414a52; }
+    .grid-container .grid-filters li a {
+      display: block;
+      text-decoration: none;
+      padding: 5px;
+      color: #414a52; }
+  .grid-container .grid {
+    margin: 0 auto; }
+  .grid-container .grid-sizer {
+    width: 350px; }
+    @media (min-width: 515px) {
+      .grid-container .grid-sizer {
+        width: 220px; } }
+  .grid-container .grid-tile {
+    width: 350px; }
+    @media (min-width: 515px) {
+      .grid-container .grid-tile {
+        width: 220px; }
+        .grid-container .grid-tile.grid-tile__width-2, .grid-container .grid-tile.grid-tile__open {
+          width: 450px; }
+        .grid-container .grid-tile.grid-tile__height-2 {
+          height: 220px; } }
+
+.grid-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 105px;
+  margin-bottom: 10px;
+  color: #000;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease, border 0.2s ease; }
+  .grid-tile:not(.grid-tile__open):hover {
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.3);
+    border-color: #000; }
+  .grid-tile .tile-logo {
+    display: inline-block;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    pointer-events: none;
+    padding: 15px 0 0 15px; }
+  .grid-tile .tile-content {
+    display: none;
+    margin-top: 20px;
+    font-size: 1rem;
+    padding: 0 15px; }
+  .grid-tile .tile-collapse {
+    display: none;
+    float: right;
+    padding: 15px;
+    cursor: pointer; }
+    .grid-tile .tile-collapse span {
+      position: relative;
+      float: right;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #000;
+      background: transparent;
+      transition: background 0.4s ease; }
+    .grid-tile .tile-collapse span:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 2px;
+      background: #000;
+      transition: background 0.4s ease; }
+    .grid-tile .tile-collapse:hover span {
+      background: #000; }
+    .grid-tile .tile-collapse:hover span:after {
+      background: #f3c808; }
+
+.grid-tile.grid-tile__open {
+  display: block;
+  cursor: default;
+  height: auto !important;
+  z-index: 2; }
+  .grid-tile.grid-tile__open .tile-collapse {
+    display: inline-block; }
+  .grid-tile.grid-tile__open .tile-content {
+    display: block; }
+
+.grid-tile.grid-tile[data-category="black-tiles"] {
+  background: #414a52;
+  color: #fff; }
+  .grid-tile.grid-tile[data-category="black-tiles"] .tile-collapse span {
+    border-color: #fff; }
+  .grid-tile.grid-tile[data-category="black-tiles"] .tile-collapse span:after {
+    background: #fff; }
+  .grid-tile.grid-tile[data-category="black-tiles"] .tile-collapse:hover span {
+    background: #fff; }
+  .grid-tile.grid-tile[data-category="black-tiles"] .tile-collapse:hover span:after {
+    background: #414a52; }
+
+.grid-tile.grid-tile[data-category="blue-tiles"] {
+  background: #86d7c5; }
+  .grid-tile.grid-tile[data-category="blue-tiles"] .tile-collapse:hover span:after {
+    background: #86d7c5; }
+
+.grid-tile.grid-tile[data-category="yellow-tiles"] {
+  background: #f3c808; }
